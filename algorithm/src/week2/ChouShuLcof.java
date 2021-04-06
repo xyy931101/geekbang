@@ -12,7 +12,7 @@ public class ChouShuLcof {
 
     public int nthUglyNumber(int n) {
         //处理边界值
-        if (n < 0) {
+        if (n <= 0) {
             return 0;
         }
         int[] dp = new int[n];
