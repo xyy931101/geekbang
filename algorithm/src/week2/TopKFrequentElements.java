@@ -14,7 +14,7 @@ public class TopKFrequentElements {
 //        int[] ints = topKFrequentElements.topKFrequent(new int[]{1, 1, 1, 2, 2, 3}, 2);
         int[] ints = topKFrequentElements.topKFrequent(new int[]{1, 1, 2}, 2);
         for(int i : ints){
-            System.out.print(i + ", ");
+//            System.out.print(i + ", ");
         }
     }
 

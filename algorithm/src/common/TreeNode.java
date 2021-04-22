@@ -20,4 +20,20 @@ public class TreeNode {
          this.right = right;
      }
 
+     public static TreeNode getInstance(){
+         TreeNode one = new TreeNode(1);
+         TreeNode two = new TreeNode(2);
+         TreeNode three = new TreeNode(2);
+         one.left = two;
+         one.right = three;
+         TreeNode four = new TreeNode(3);
+         TreeNode five = new TreeNode(4);
+         two.left = four;
+         two.right = five;
+         TreeNode six = new TreeNode(4);
+         TreeNode se = new TreeNode(3);
+         three.left = six;
+         three.right = se;
+         return one;
+     }
 }
