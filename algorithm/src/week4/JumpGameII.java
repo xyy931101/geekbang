@@ -9,25 +9,19 @@ package week4;
 public class JumpGameII {
 
     public int jump(int[] nums) {
-        if (nums == null) {
-            return 0;
-        }
-
-        int[] dp = new int[nums.length];
-        dp[0] = 0;
-        for (int i = 0; i < nums.length - 1; i++) {
-            int num = nums[i];
-            int temp = 1;
-            while (i + temp < nums.length && temp <= num) {
-                if (dp[i + temp] != 0) {
-                    dp[i + temp] = Math.min(dp[i] + 1, dp[i + temp]);
-                }else {
-                    dp[i + temp] = dp[i] + 1;
-                }
-                temp++;
+        int length = nums.length;
+        int end = 0;
+        int maxPosition = 0;
+        int steps = 0;
+        for (int i = 0; i < length - 1; i++) {
+            maxPosition = Math.max(maxPosition, i + nums[i]);
+            if (i == end) {
+                end = maxPosition;
+                steps++;
             }
         }
-        return dp[nums.length - 1];
+
+        return steps;
     }
 
     //动态规划
