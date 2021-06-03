@@ -54,4 +54,24 @@ public class Trie {
         Trie node = searchPrefix(prefix);
         return node != null;
     }
+
+    public boolean getEnd() {
+        return isEnd;
+    }
+
+    public Trie[] getNext() {
+        return next;
+    }
+
+    public boolean isEnd() {
+        return isEnd;
+    }
+
+    public void setEnd(boolean end) {
+        isEnd = end;
+    }
+
+    public void setNext(Trie[] next) {
+        this.next = next;
+    }
 }
