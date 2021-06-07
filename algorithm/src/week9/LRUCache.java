@@ -82,9 +82,13 @@ public class LRUCache {
 }
 
 class CacheNode{
+    //记录前指针
     CacheNode pre;
+    //记录后指针
     CacheNode next;
+    //记录key(移除的时候用到)
     Integer value;
+    //记录key
     Integer key;
 
     public CacheNode(int key, int value) {
