@@ -41,7 +41,7 @@ public class QuickSort {
             while (left < right && a[right] >= pivot) right--;
             a[left] = a[right];
         }
-        a[right] = pivot;
+        a[left] = pivot;
 
         process(a, 0, right - 1);
         process(a, right + 1, end);
